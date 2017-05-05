@@ -1,0 +1,61 @@
+diff --git a/battle.php b/battle.php
+index bd38342..3ed4969 100644
+--- a/battle.php
++++ b/battle.php
+@@ -4,17 +4,20 @@ require __DIR__.'/bootstrap.php';
+ $shipLoader = new ShipLoader();
+ $ships = $shipLoader->getShips();
+ 
+-$ship1Name = isset($_POST['ship1_name']) ? $_POST['ship1_name'] : null;
++$ship1Id = isset($_POST['ship1_id']) ? $_POST['ship1_id'] : null;
+ $ship1Quantity = isset($_POST['ship1_quantity']) ? $_POST['ship1_quantity'] : 1;
+-$ship2Name = isset($_POST['ship2_name']) ? $_POST['ship2_name'] : null;
++$ship2Id = isset($_POST['ship2_id']) ? $_POST['ship2_id'] : null;
+ $ship2Quantity = isset($_POST['ship2_quantity']) ? $_POST['ship2_quantity'] : 1;
+ 
+-if (!$ship1Name || !$ship2Name) {
++if (!$ship1Id || !$ship2Id) {
+     header('Location: /index.php?error=missing_data');
+     die;
+ }
+ 
+-if (!isset($ships[$ship1Name]) || !isset($ships[$ship2Name])) {
++$ship1 = $shipLoader->findOneById($ship1Id);
++$ship2 = $shipLoader->findOneById($ship2Id);
++
++if (!$ship1 || !$ship2) {
+     header('Location: /index.php?error=bad_ships');
+     die;
+ }
+@@ -24,9 +27,6 @@ if ($ship1Quantity <= 0 || $ship2Quantity <= 0) {
+     die;
+ }
+ 
+-$ship1 = $ships[$ship1Name];
+-$ship2 = $ships[$ship2Name];
+-
+ $battleManager = new BattleManager();
+ $battleResult = $battleManager->battle($ship1, $ship1Quantity, $ship2, $ship2Quantity);
+ ?>
+diff --git a/lib/ShipLoader.php b/lib/ShipLoader.php
+index ad0cb0a..5f6ba5f 100644
+--- a/lib/ShipLoader.php
++++ b/lib/ShipLoader.php
+@@ -21,6 +21,17 @@ class ShipLoader
+         return $ships;
+     }
+ 
++    public function findOneById($id)
++    {
++        $pdo = new PDO('mysql:host=localhost;dbname=oo_battle', 'root');
++        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
++        $statement = $pdo->prepare('SELECT * FROM ship WHERE id = :id');
++        $statement->execute(array('id' => $id));
++        $shipArray = $statement->fetch(PDO::FETCH_ASSOC);
++
++        var_dump($shipArray);die;
++    }
++
+     private function queryForShips()
+     {
+         $pdo = new PDO('mysql:host=localhost;dbname=oo_battle', 'root');

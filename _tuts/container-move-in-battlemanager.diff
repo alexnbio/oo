@@ -1,0 +1,49 @@
+diff --git a/battle.php b/battle.php
+index 5cb2fe3..143f9bc 100644
+--- a/battle.php
++++ b/battle.php
+@@ -24,12 +24,13 @@ if (!$ship1 || !$ship2) {
+     die;
+ }
+ 
++$battleManager = $container->getBattleManager();
++
+ if ($ship1Quantity <= 0 || $ship2Quantity <= 0) {
+     header('Location: /index.php?error=bad_quantities');
+     die;
+ }
+ 
+-$battleManager = new BattleManager();
+ $battleResult = $battleManager->battle($ship1, $ship1Quantity, $ship2, $ship2Quantity);
+ ?>
+ 
+diff --git a/lib/Container.php b/lib/Container.php
+index c8e01ec..6e159ca 100644
+--- a/lib/Container.php
++++ b/lib/Container.php
+@@ -8,6 +8,8 @@ class Container
+ 
+     private $shipLoader;
+ 
++    private $battleManager;
++
+     public function __construct(array $configuration)
+     {
+         $this->configuration = $configuration;
+@@ -42,4 +44,16 @@ class Container
+ 
+         return $this->shipLoader;
+     }
++
++    /**
++     * @return BattleManager
++     */
++    public function getBattleManager()
++    {
++        if ($this->battleManager === null) {
++            $this->battleManager = new BattleManager();
++        }
++
++        return $this->battleManager;
++    }
+ }

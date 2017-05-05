@@ -1,0 +1,54 @@
+diff --git a/lib/ShipLoader.php b/lib/ShipLoader.php
+index 5f6ba5f..7084f97 100644
+--- a/lib/ShipLoader.php
++++ b/lib/ShipLoader.php
+@@ -9,13 +9,7 @@ class ShipLoader
+         $shipsData = $this->queryForShips();
+ 
+         foreach ($shipsData as $shipData) {
+-            $ship = new Ship($shipData['name']);
+-            $ship->setId($shipData['id']);
+-            $ship->setWeaponPower($shipData['weapon_power']);
+-            $ship->setJediFactor($shipData['jedi_factor']);
+-            $ship->setStrength($shipData['strength']);
+-
+-            $ships[] = $ship;
++            $ships[] = $this->createShipFromData($shipData);
+         }
+ 
+         return $ships;
+@@ -29,9 +23,25 @@ class ShipLoader
+         $statement->execute(array('id' => $id));
+         $shipArray = $statement->fetch(PDO::FETCH_ASSOC);
+ 
+-        var_dump($shipArray);die;
++        if (!$shipArray) {
++            return null;
++        }
++
++        return $this->createShipFromData($shipArray);
+     }
+ 
++    private function createShipFromData(array $shipData)
++    {
++        $ship = new Ship($shipData['name']);
++        $ship->setId($shipData['id']);
++        $ship->setWeaponPower($shipData['weapon_power']);
++        $ship->setJediFactor($shipData['jedi_factor']);
++        $ship->setStrength($shipData['strength']);
++
++        return $ship;
++    }
++
++
+     private function queryForShips()
+     {
+         $pdo = new PDO('mysql:host=localhost;dbname=oo_battle', 'root');
+@@ -42,4 +52,5 @@ class ShipLoader
+ 
+         return $shipsArray;
+     }
+-}
+\ No newline at end of file
++}
++

@@ -1,0 +1,75 @@
+diff --git a/battle.php b/battle.php
+index 3ed4969..e181620 100644
+--- a/battle.php
++++ b/battle.php
+@@ -1,7 +1,15 @@
+ <?php
+ require __DIR__.'/bootstrap.php';
+ 
+-$shipLoader = new ShipLoader();
++$pdo = new PDO(
++    $configuration['db_dsn'],
++    $configuration['db_user'],
++    $configuration['db_pass']
++);
++$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
++
++$shipLoader = new ShipLoader($pdo);
++
+ $ships = $shipLoader->getShips();
+ 
+ $ship1Id = isset($_POST['ship1_id']) ? $_POST['ship1_id'] : null;
+diff --git a/index.php b/index.php
+index e732772..3adcaee 100644
+--- a/index.php
++++ b/index.php
+@@ -1,11 +1,14 @@
+ <?php
+ require __DIR__.'/bootstrap.php';
+ 
+-$shipLoader = new ShipLoader(
++$pdo = new PDO(
+     $configuration['db_dsn'],
+     $configuration['db_user'],
+     $configuration['db_pass']
+ );
++$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
++
++$shipLoader = new ShipLoader($pdo);
+ $ships = $shipLoader->getShips();
+ 
+ $errorMessage = '';
+diff --git a/lib/ShipLoader.php b/lib/ShipLoader.php
+index 2ecd9d5..9ccfdad 100644
+--- a/lib/ShipLoader.php
++++ b/lib/ShipLoader.php
+@@ -4,15 +4,9 @@ class ShipLoader
+ {
+     private $pdo;
+ 
+-    private $dbDsn;
+-    private $dbUser;
+-    private $dbPass;
+-
+-    public function __construct($dbDsn, $dbUser, $dbPass)
++    public function __construct(PDO $pdo)
+     {
+-        $this->dbDsn = $dbDsn;
+-        $this->dbUser = $dbUser;
+-        $this->dbPass = $dbPass;
++        $this->pdo = $pdo;
+     }
+ 
+     /**
+@@ -64,11 +58,6 @@ class ShipLoader
+      */
+     private function getPDO()
+     {
+-        if ($this->pdo === null) {
+-            $this->pdo = new PDO($this->dbDsn, $this->dbUser, $this->dbPass);
+-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+-        }
+-
+         return $this->pdo;
+     }
+ 

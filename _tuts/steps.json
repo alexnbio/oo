@@ -1,0 +1,720 @@
+{
+    "steps": [
+        {
+            "id": "start",
+            "name": "start",
+            "description": null
+        },
+        {
+            "id": "class-basics-create-play-php-file",
+            "name": "Class Basics: Create play.php file",
+            "description": null
+        },
+        {
+            "id": "class-basics-create-the-class",
+            "name": "Class Basics: Create the class",
+            "description": null
+        },
+        {
+            "id": "class-basics-instantiate",
+            "name": "Class Basics: Instantiate",
+            "description": null
+        },
+        {
+            "id": "class-basics-adding-a-property",
+            "name": "Class Basics: Adding a property",
+            "description": null
+        },
+        {
+            "id": "class-basics-changing-the-property",
+            "name": "Class Basics: Changing the property",
+            "description": null
+        },
+        {
+            "id": "method-basics-adding-sayhello",
+            "name": "Method Basics: Adding sayHello()",
+            "description": null
+        },
+        {
+            "id": "method-basics-adding-getname-with-fake-implementation",
+            "name": "Method Basics: Adding getName() with fake implementation",
+            "description": null
+        },
+        {
+            "id": "method-basics-finishing-getname-with-this",
+            "name": "Method Basics: Finishing getName() with $this",
+            "description": null
+        },
+        {
+            "id": "method-basics-add-the-other-properties",
+            "name": "Method Basics: Add the other properties",
+            "description": null
+        },
+        {
+            "id": "method-basics-adding-default-args",
+            "name": "Method Basics: Adding default args",
+            "description": null
+        },
+        {
+            "id": "method-basics-printing-weaponpower",
+            "name": "Method Basics: Printing weaponPower",
+            "description": null
+        },
+        {
+            "id": "method-basics-setting-weaponpower",
+            "name": "Method Basics: Setting weaponPower",
+            "description": null
+        },
+        {
+            "id": "method-basics-adding-gettacticaldescription",
+            "name": "Method Basics: Adding getTacticalDescription()",
+            "description": null
+        },
+        {
+            "id": "method-basics-giving-getnameandspecs-and-arg",
+            "name": "Method Basics: Giving getNameAndSpecs and arg",
+            "description": null
+        },
+        {
+            "id": "multiple-objects-adding-helper-printshipsummary",
+            "name": "Multiple Objects: Adding helper printShipSummary()",
+            "description": null
+        },
+        {
+            "id": "multiple-objects-adding-phpdoc-for-ship-argument",
+            "name": "Multiple Objects: Adding PHPDoc for Ship argument",
+            "description": null
+        },
+        {
+            "id": "multiple-objects-create-a-second-ship",
+            "name": "Multiple Objects: Create a second Ship",
+            "description": null
+        },
+        {
+            "id": "multiple-objects-adding-doesgivenshiphavemorestrength",
+            "name": "Multiple Objects: Adding doesGivenShipHaveMoreStrength()",
+            "description": null
+        },
+        {
+            "id": "organization-moving-ship-class-to-ship-php",
+            "name": "Organization: Moving Ship class to Ship.php",
+            "description": null
+        },
+        {
+            "id": "using-objects-create-one-ship-and-var-dump",
+            "name": "Using Objects: Create one Ship and var_dump",
+            "description": null
+        },
+        {
+            "id": "using-objects-using-proper-syntax-in-table",
+            "name": "Using Objects: Using proper syntax in table",
+            "description": null
+        },
+        {
+            "id": "using-objects-use-getname-method",
+            "name": "Using Objects: Use getName() method",
+            "description": null
+        },
+        {
+            "id": "using-objects-fixing-syntax-in-select",
+            "name": "Using Objects: Fixing syntax in select",
+            "description": null
+        },
+        {
+            "id": "using-objects-call-getnameandspecs-for-options",
+            "name": "Using Objects: Call getNameAndSpecs for options",
+            "description": null
+        },
+        {
+            "id": "property-visibility-setting-a-bad-strength",
+            "name": "Property Visibility: Setting a bad strength",
+            "description": null
+        },
+        {
+            "id": "property-visibility-making-strength-private",
+            "name": "Property Visibility: Making strength private",
+            "description": null
+        },
+        {
+            "id": "property-visibility-adding-setstrength-and-getstrength",
+            "name": "Property Visibility: adding setStrength and getStrength",
+            "description": null
+        },
+        {
+            "id": "property-visibility-adding-is-numeric-check-in-setstrength",
+            "name": "Property Visibility: Adding is_numeric check in setStrength",
+            "description": null
+        },
+        {
+            "id": "property-visibility-putting-back-good-strength-value",
+            "name": "Property Visibility: Putting back good strength value",
+            "description": null
+        },
+        {
+            "id": "property-visibility-making-all-other-properties-private",
+            "name": "Property Visibility: Making all other properties private",
+            "description": null
+        },
+        {
+            "id": "property-visibility-adding-other-3-ships",
+            "name": "Property Visibility: Adding other 3 ships",
+            "description": null
+        },
+        {
+            "id": "fixing-battle-php-dumping-ship1-and-ship2",
+            "name": "Fixing battle.php: Dumping $ship1 and $ship2",
+            "description": null
+        },
+        {
+            "id": "fixing-battle-php-removing-array-type-hint",
+            "name": "Fixing battle.php: Removing array type-hint",
+            "description": null
+        },
+        {
+            "id": "fixing-battle-php-starting-to-use-correct-syntax",
+            "name": "Fixing battle.php: Starting to use correct syntax",
+            "description": null
+        },
+        {
+            "id": "type-hinting-pass-bad-type-of-argument-to-battle",
+            "name": "Type-Hinting: Pass bad type of argument to battle()",
+            "description": null
+        },
+        {
+            "id": "type-hinting-type-hint-the-arguments-to-battle",
+            "name": "Type-Hinting: Type-hint the arguments to Battle",
+            "description": null
+        },
+        {
+            "id": "fixing-battle-php-fixing-syntax-in-battle",
+            "name": "Fixing battle.php: Fixing syntax in battle()",
+            "description": null
+        },
+        {
+            "id": "fixing-battle-php-dumping-outcome-to-see-objects",
+            "name": "Fixing battle.php: Dumping $outcome to see objects",
+            "description": null
+        },
+        {
+            "id": "fixing-battle-php-finishing-object-syntax-in-battle-php",
+            "name": "Fixing battle.php: Finishing object syntax in battle.php",
+            "description": null
+        },
+        {
+            "id": "constructor-adding-it-printing-something",
+            "name": "Constructor: Adding it, printing something",
+            "description": null
+        },
+        {
+            "id": "constructor-setting-underrepair-and-adding-an-isfunctional-method-that-we-use",
+            "name": "Constructor: Setting underRepair and adding an isFunctional() method that we use",
+            "description": null
+        },
+        {
+            "id": "constructor-passing-an-argument",
+            "name": "Constructor: Passing an argument",
+            "description": null
+        },
+        {
+            "id": "battlemanager-basic-creation-and-usage",
+            "name": "BattleManager: Basic creation and usage",
+            "description": null
+        },
+        {
+            "id": "battlemanager-private-didjedidestroyshipusingtheforce",
+            "name": "BattleManager:: private didJediDestroyShipUsingTheForce()",
+            "description": null
+        },
+        {
+            "id": "shiploader-class-to-help-load-ships",
+            "name": "ShipLoader: Class to help load ships",
+            "description": null
+        },
+        {
+            "id": "refactor-rename-functions-php-to-bootstrap-php",
+            "name": "Refactor: Rename functions.php to bootstrap.php",
+            "description": null
+        },
+        {
+            "id": "battleresult-class-with-construct",
+            "name": "BattleResult: Class with __construct",
+            "description": null
+        },
+        {
+            "id": "battleresult-phpdoc-getters",
+            "name": "BattleResult: PHPDoc + getters",
+            "description": null
+        },
+        {
+            "id": "battleresult-renaming-jedi-isser",
+            "name": "BattleResult: renaming jedi \"isser\"",
+            "description": null
+        },
+        {
+            "id": "battleresult-returing-from-battle-and-using",
+            "name": "BattleResult: Returing from battle() and using",
+            "description": null
+        },
+        {
+            "id": "battleresult-optional-winner-loser-args",
+            "name": "BattleResult: Optional winner\/loser args",
+            "description": null
+        },
+        {
+            "id": "battlemanager-update-ship-strength",
+            "name": "BattleManager: update Ship strength",
+            "description": null
+        },
+        {
+            "id": "database-copy-the-init-db-php-script",
+            "name": "Database: Copy the init_db.php script",
+            "description": null
+        },
+        {
+            "id": "database-make-query-in-shiploader",
+            "name": "Database: Make query in ShipLoader",
+            "description": null
+        },
+        {
+            "id": "database-shiploader-query-in-private-method",
+            "name": "Database: ShipLoader query in private method",
+            "description": null
+        },
+        {
+            "id": "database-hydrate-the-objects",
+            "name": "Database: Hydrate the objects!",
+            "description": null
+        },
+        {
+            "id": "database-add-id-property-and-use-it",
+            "name": "Database: Add id property and use it",
+            "description": null
+        },
+        {
+            "id": "database-query-by-id-in-battle-php",
+            "name": "Database: Query by id in battle.php",
+            "description": null
+        },
+        {
+            "id": "database-refactor-shiploader-to-hydrate",
+            "name": "Database: Refactor ShipLoader to hydrate",
+            "description": null
+        },
+        {
+            "id": "database-shiploader-phpdoc",
+            "name": "Database: ShipLoader PHPDoc",
+            "description": null
+        },
+        {
+            "id": "di-getter-for-pdo",
+            "name": "DI: Getter for PDO",
+            "description": null
+        },
+        {
+            "id": "di-private-property-for-only-one-pdo",
+            "name": "DI: private property for only one pdo",
+            "description": null
+        },
+        {
+            "id": "di-adding-configuration-as-construct-args",
+            "name": "DI: Adding configuration as construct args",
+            "description": null
+        },
+        {
+            "id": "di-injecting-only-pdo",
+            "name": "DI: Injecting only PDO",
+            "description": null
+        },
+        {
+            "id": "setup-moving-init-db-php-to-override-the-original",
+            "name": "Setup: Moving init_db.php to override the original",
+            "description": null
+        },
+        {
+            "id": "container-basic-container-getpdo",
+            "name": "Container: Basic Container::getPDO",
+            "description": null
+        },
+        {
+            "id": "container-inject-configuration",
+            "name": "Container: Inject configuration",
+            "description": null
+        },
+        {
+            "id": "container-properties-to-avoid-dups",
+            "name": "Container: Properties to avoid dups",
+            "description": null
+        },
+        {
+            "id": "container-move-in-shiploader",
+            "name": "Container: Move in ShipLoader",
+            "description": null
+        },
+        {
+            "id": "container-move-in-battlemanager",
+            "name": "Container: Move in BattleManager",
+            "description": null
+        },
+        {
+            "id": "container-reorganizing-models-and-services",
+            "name": "Container: Reorganizing models and services",
+            "description": null
+        },
+        {
+            "id": "inheritance-create-rebelship",
+            "name": "Inheritance: Create RebelShip",
+            "description": null
+        },
+        {
+            "id": "inheritance-extends-ship",
+            "name": "Inheritance: extends Ship",
+            "description": null
+        },
+        {
+            "id": "inheritance-add-methods",
+            "name": "Inheritance: Add methods",
+            "description": null
+        },
+        {
+            "id": "inheritance-rebelship-from-team-value",
+            "name": "Inheritance: RebelShip from team value",
+            "description": null
+        },
+        {
+            "id": "inheritance-echo-in-parent",
+            "name": "Inheritance: Echo in parent",
+            "description": null
+        },
+        {
+            "id": "inheritance-override-isfunctional",
+            "name": "Inheritance: override isFunctional",
+            "description": null
+        },
+        {
+            "id": "inheritance-copy-getnameandspecs",
+            "name": "Inheritance: Copy getNameAndSpecs",
+            "description": null
+        },
+        {
+            "id": "inheritance-try-protected-visibility",
+            "name": "Inheritance: Try protected visibility",
+            "description": null
+        },
+        {
+            "id": "inheritance-use-public-functions",
+            "name": "Inheritance: Use public functions",
+            "description": null
+        },
+        {
+            "id": "inheritance-cannot-call-private-function",
+            "name": "Inheritance: Cannot call private function",
+            "description": null
+        },
+        {
+            "id": "inheritance-protected-function",
+            "name": "Inheritance: protected function",
+            "description": null
+        },
+        {
+            "id": "inheritance-remove-dummy-function",
+            "name": "Inheritance: Remove dummy function",
+            "description": null
+        },
+        {
+            "id": "inheritance-calling-the-parent-function-incorrectly",
+            "name": "Inheritance: Calling the parent function incorrectly",
+            "description": null
+        },
+        {
+            "id": "inheritance-using-parent",
+            "name": "Inheritance: Using parent",
+            "description": null
+        },
+        {
+            "id": "abstract-getjedifactor-override",
+            "name": "Abstract: getJediFactor override",
+            "description": null
+        },
+        {
+            "id": "abstract-abstractship-with-everything",
+            "name": "Abstract: AbstractShip with everything",
+            "description": null
+        },
+        {
+            "id": "abstract-jedifactor-into-ship",
+            "name": "Abstract: jediFactor into Ship",
+            "description": null
+        },
+        {
+            "id": "abstract-isfunctional-into-ship",
+            "name": "Abstract: isFunctional into Ship",
+            "description": null
+        },
+        {
+            "id": "abstract-gettype-into-ship",
+            "name": "Abstract: getType into Ship",
+            "description": null
+        },
+        {
+            "id": "abstract-abstractship-type-hints",
+            "name": "Abstract: AbstractShip type-hints",
+            "description": null
+        },
+        {
+            "id": "abstract-abstract-getjedifactor",
+            "name": "Abstract: abstract getJediFactor",
+            "description": null
+        },
+        {
+            "id": "abstract-abstractship-return",
+            "name": "Abstract: AbstractShip @return",
+            "description": null
+        },
+        {
+            "id": "abstract-add-2-more-abstract-methods",
+            "name": "Abstract: Add 2 more abstract methods",
+            "description": null
+        },
+        {
+            "id": "abstract-brokenship-empty",
+            "name": "Abstract: BrokenShip empty",
+            "description": null
+        },
+        {
+            "id": "abstract-fill-in-abstract-methods",
+            "name": "Abstract: Fill in abstract methods",
+            "description": null
+        },
+        {
+            "id": "interface-refactor-to-pdoshipstorage",
+            "name": "Interface: Refactor to PdoShipStorage",
+            "description": null
+        },
+        {
+            "id": "interface-jsonfileshipstorage",
+            "name": "Interface: JsonFileShipStorage",
+            "description": null
+        },
+        {
+            "id": "interface-extend-pdoshipstorage",
+            "name": "Interface: extend PdoShipStorage",
+            "description": null
+        },
+        {
+            "id": "interface-abstractshipstorage",
+            "name": "Interface: AbstractShipStorage",
+            "description": null
+        },
+        {
+            "id": "interface-shipstorageinterface",
+            "name": "Interface: ShipStorageInterface",
+            "description": null
+        },
+        {
+            "id": "interface-document-it",
+            "name": "Interface: Document it",
+            "description": null
+        },
+        {
+            "id": "constants-new-battle-type-feature",
+            "name": "Constants: New battle type feature",
+            "description": null
+        },
+        {
+            "id": "constants-create-and-use-constants",
+            "name": "Constants: Create and use constants",
+            "description": null
+        },
+        {
+            "id": "constants-document-them",
+            "name": "Constants: Document them",
+            "description": null
+        },
+        {
+            "id": "static-use-self",
+            "name": "Static: Use self",
+            "description": null
+        },
+        {
+            "id": "static-create-non-static-method-and-use",
+            "name": "Static: Create non-static method and use",
+            "description": null
+        },
+        {
+            "id": "static-refactor-to-static",
+            "name": "Static: Refactor to static",
+            "description": null
+        },
+        {
+            "id": "namespaces-add-simple-namespace",
+            "name": "Namespaces: Add simple namespace",
+            "description": null
+        },
+        {
+            "id": "namespaces-show-use-statement",
+            "name": "Namespaces: Show use statement",
+            "description": null
+        },
+        {
+            "id": "autoload-remove-require-statement",
+            "name": "Autoload: Remove require statement",
+            "description": null
+        },
+        {
+            "id": "autoload-add-simple-autoloader",
+            "name": "Autoload: Add simple autoloader",
+            "description": null
+        },
+        {
+            "id": "autoload-homemade-psr0-autoloader",
+            "name": "Autoload: Homemade PSR0 autoloader",
+            "description": null
+        },
+        {
+            "id": "namespaces-add-namespace-to-everything",
+            "name": "Namespaces: Add namespace to everything",
+            "description": null
+        },
+        {
+            "id": "namespaces-add-use-in-index-php",
+            "name": "Namespaces: Add use in index.php",
+            "description": null
+        },
+        {
+            "id": "namespaces-add-use-for-classes-we-moved",
+            "name": "Namespaces: Add use for classes we moved",
+            "description": null
+        },
+        {
+            "id": "namespaces-change-to-pdo",
+            "name": "Namespaces: Change to \\PDO",
+            "description": null
+        },
+        {
+            "id": "autoload-use-composer",
+            "name": "Autoload: Use composer",
+            "description": null
+        },
+        {
+            "id": "exceptions-causing-one-to-be-thrown",
+            "name": "Exceptions: Causing one to be thrown",
+            "description": null
+        },
+        {
+            "id": "exceptions-catch-an-exception",
+            "name": "Exceptions: Catch an exception",
+            "description": null
+        },
+        {
+            "id": "exceptions-using-exception-object",
+            "name": "Exceptions: Using Exception object",
+            "description": null
+        },
+        {
+            "id": "exceptions-dump-object",
+            "name": "Exceptions: Dump object",
+            "description": null
+        },
+        {
+            "id": "exceptions-only-catch-pdoexception",
+            "name": "Exceptions: Only catch PDOException",
+            "description": null
+        },
+        {
+            "id": "exceptions-throw-un-caught",
+            "name": "Exceptions: Throw un-caught",
+            "description": null
+        },
+        {
+            "id": "exceptions-remove-debug-code",
+            "name": "Exceptions: Remove debug code",
+            "description": null
+        },
+        {
+            "id": "tostring-print-an-object-crazy",
+            "name": "__toString: Print an object. Crazy!",
+            "description": null
+        },
+        {
+            "id": "tostring-add-tostring",
+            "name": "__toString: Add __toString()",
+            "description": null
+        },
+        {
+            "id": "magic-methods-try-to-access-private-property",
+            "name": "Magic Methods: Try to access private property",
+            "description": null
+        },
+        {
+            "id": "magic-methods-get-and-dump-arg",
+            "name": "Magic Methods: __get() and dump arg",
+            "description": null
+        },
+        {
+            "id": "magic-methods-finish-get",
+            "name": "Magic Methods: Finish __get()",
+            "description": null
+        },
+        {
+            "id": "magic-methods-remove-that-silliness",
+            "name": "Magic Methods: Remove that silliness",
+            "description": null
+        },
+        {
+            "id": "arrayaccess-use-battleresult-as-array",
+            "name": "ArrayAccess: Use BattleResult as array",
+            "description": null
+        },
+        {
+            "id": "arrayaccess-add-arrayaccess",
+            "name": "ArrayAccess: Add ArrayAccess",
+            "description": null
+        },
+        {
+            "id": "iterable-create-shipcollection",
+            "name": "Iterable: Create ShipCollection",
+            "description": null
+        },
+        {
+            "id": "iterable-add-arrayaccess",
+            "name": "Iterable: Add ArrayAccess",
+            "description": null
+        },
+        {
+            "id": "iterable-iteratoraggregate",
+            "name": "Iterable: IteratorAggregate",
+            "description": null
+        },
+        {
+            "id": "iterable-add-method-to-collection",
+            "name": "Iterable: Add method to collection",
+            "description": null
+        },
+        {
+            "id": "traits-add-bountyhuntership-empty",
+            "name": "Traits: Add BountyHunterShip empty",
+            "description": null
+        },
+        {
+            "id": "traits-fill-in-bountyhuntership",
+            "name": "Traits: Fill in BountyHunterShip",
+            "description": null
+        },
+        {
+            "id": "traits-add-the-jedifactor-trait",
+            "name": "Traits: Add the jediFactor trait",
+            "description": null
+        },
+        {
+            "id": "composition-setup-loggableshipstorage",
+            "name": "Composition: Setup LoggableShipStorage",
+            "description": null
+        },
+        {
+            "id": "composition-add-some-logging",
+            "name": "Composition: Add some logging",
+            "description": null
+        }
+    ],
+    "sha": "b155991981148f0a7df84f09b51007156162090c"
+}

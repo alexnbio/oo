@@ -1,0 +1,58 @@
+title:  "OOP (Course 2): Services, Dependency Injection and Containers"
+summary: |
+    Time to take things up a notch!
+    
+    In this Course, we'll leverage what we learned in
+    [Course 1](http://knpuniversity.com/screencast/oo) to *really* start
+    using what we know. We'll clean up old functions with new classes, learn
+    a practice called dependency injection and organize our objects into
+    something called a container. This is the course that *really* makes
+    objects useful and sets us up for future stuff (inheritance, interfaces, etc).
+    
+    So let's get serious:
+    
+    * Service Classes
+    * Organize with private functions
+    * Goodbye arrays, hello BattleResult
+    * Objects passed by Reference
+    * Query from the Database, but using Objects!
+    * Dependency Injection!!!
+    * Creating a Service Container
+    
+    Do it!
+
+illustration: oo-ep2.png
+
+tuts_hero:
+    start_step: constructor-passing-an-argument
+    finish_step: 'Container: Reorganizing models and services'
+
+chapters:
+    service-classes:
+        is_free:    true
+        video_key:    140093157
+    army-of-services:
+        is_free:    true
+        video_key:    140093160
+    battle-result-model:
+        video_key:    140093159
+    semantic-methods:
+        video_key:    140093158
+    by_reference:
+        video_key:    140093161
+    objects-from-database:
+        video_key:    140093162
+    handling-id:
+        video_key:    140093164
+    one-db-conn-with-property:
+        video_key:    140093163
+    centralize-configuration:
+        video_key:    140093165
+    centralize-connection:
+        video_key:    140093167
+    service-container:
+        video_key:    140093166
+    container-wrapup:
+        video_key:    140093168
+    container-rescue:
+        video_key:    140093169

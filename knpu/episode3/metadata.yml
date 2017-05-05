@@ -1,0 +1,77 @@
+title:  "OOP (course 3): Inheritance, Abstract Classes, Interfaces and other amazing things"
+summary: |
+    Things are about to get crazy.
+
+    You've learned the basics ([Course 1](http://knpuniversity.com/screencast/oo)).
+    Heck, you even mastered service objects, model objects and service containers
+    in [Course 2](http://knpuniversity.com/screencast/oo-ep2)!
+
+    Now we're getting into the meat of OO:
+
+    * Class inheritance!
+    * What about abstract classes?
+    * Introducing the "protected" visibility
+    * What is an interface? How can I leverage them?
+
+    This stuff will start to separate you from a beginner OO developer to someone
+    who can really understand and flex OO code. It's hard stuff. So let's get started.
+
+illustration: oo-ep3.png
+
+tuts_hero:
+    start_step: 'Container: Reorganizing models and services'
+    finish_step: 'Interface: Document it'
+
+challenge_repo: knpuniversity/oo-challenges
+
+chapters:
+    extends:
+        is_free:    true
+        video_key: 140701988
+        challenges:
+            - extending_inheritfunctionalitycoding
+            - extending_callnonexistentmethodmc
+    override:
+        is_free:    true
+        video_key: 140703255
+        challenges:
+            - override_overrideinheritmethodcoding
+            - override_calloverriddenmethodmc
+    protected-visibility:
+        video_key: 140705348
+        challenges:
+            - protectedvisibility_getinheritedpropertycoding
+            - protectedvisibility_propertyvisibilitymc
+    parent:
+        video_key: 140706130
+        challenges:
+            - parent_callparentmethodcoding
+    abstract-ship:
+        video_key: 140707815
+        challenges:
+            - abstractship_extendabstractclasscoding
+            - abstractship_inheritanceoverheadmc
+    adding-abstract:
+        video_key: 140720151
+        challenges:
+            - addingabstract_functiontypehintwithclassnamemc
+            - addingabstract_createabstractmethodcoding
+    broken-ship:
+        video_key: 140711954
+        challenges:
+            - brokenship_createdeathstariiicoding
+    pdo-ship-storage:
+        video_key: 141070888
+        challenges:
+            - pdoshipstorage_decomposestringtransformercoding
+            - pdoshipstorage_stringtransformerdecompositionadvantagesmc
+    abstract-ship-loader:
+        video_key: 141435296
+        challenges:
+            - abstractshiploader_createabstractplanetcoding
+    interfaces:
+        video_key: 141440167
+        challenges:
+            - interfaces_implementplanetinterfacecoding
+            - interfaces_interfacevsabstractclassmc
+            - interfaces_implementweaponinterfacecoding

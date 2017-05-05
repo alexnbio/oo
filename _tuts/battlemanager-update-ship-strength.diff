@@ -1,0 +1,33 @@
+diff --git a/battle.php b/battle.php
+index 98e643a..bd38342 100644
+--- a/battle.php
++++ b/battle.php
+@@ -86,6 +86,13 @@ $battleResult = $battleManager->battle($ship1, $ship1Quantity, $ship2, $ship2Qua
+                         <?php endif; ?>
+                     <?php endif; ?>
+                 </p>
++                <h3>Remaining Strength</h3>
++                <dl class="dl-horizontal">
++                    <dt><?php echo $ship1->getName(); ?></dt>
++                    <dd><?php echo $ship1->getStrength(); ?></dd>
++                    <dt><?php echo $ship2->getName(); ?></dt>
++                    <dd><?php echo $ship2->getStrength(); ?></dd>
++                </dl>
+             </div>
+             <a href="/index.php"><p class="text-center"><i class="fa fa-undo"></i> Battle again</p></a>
+         
+diff --git a/lib/BattleManager.php b/lib/BattleManager.php
+index 2d53460..e4dc5bc 100644
+--- a/lib/BattleManager.php
++++ b/lib/BattleManager.php
+@@ -34,6 +34,10 @@ class BattleManager
+             $ship2Health = $ship2Health - ($ship1->getWeaponPower() * $ship1Quantity);
+         }
+ 
++        // update the strengths on the ships, so we can show this
++        $ship1->setStrength($ship1Health);
++        $ship2->setStrength($ship2Health);
++
+         if ($ship1Health <= 0 && $ship2Health <= 0) {
+             // they destroyed each other
+             $winningShip = null;

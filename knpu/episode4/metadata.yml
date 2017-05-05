@@ -1,0 +1,102 @@
+title:  "OOP (course 4): Static methods, Namespaces, Exceptions & Traits! Woh!"
+summary: |
+    Finally, we can really *unload* and see all the *cool* OOP stuff
+    that we haven't covered yet. These are the last missing pieces that
+    are standing between you and understanding any OO code you meet.
+
+    * Static methods
+    * Class constants
+    * Namespaces
+    * Autoloading (RIP `require` statements)
+    * `__toString` & the other magic functions
+    * Treat that `$object[1]` like an array (`ArrayAccess`)
+    * Throwing and catching ~~a baseball~~ Exceptions
+    * Traits! Horizontal code re-use
+    * Composition Versus Inheritance: Dressing your classes for success
+
+    Finally, you're going to start to see some *serious* pay-off from
+    these new, crazy OO skills you've got. In this tutorial, OO is here
+    to impress *us*. Dig in.
+
+illustration: oo-ep4.png
+
+# todo - fill in correctly!
+tuts_hero:
+   start_step: 'interface-document-it'
+   finish_step: 'composition-add-some-logging'
+
+challenge_repo: knpuniversity/oo-challenges
+
+chapters:
+    class-constants:
+        is_free:    true
+        video_key: 175372075
+        challenges:
+            - classconstants_replacestringswithconstantscoding
+            - classconstants_uppercaseconstantsmc
+            - classconstants_setconstantmc
+            - classconstants_hexcolorconstantsmc
+    static-vs-non-static-and-self:
+        is_free:    true
+        video_key: 175248058
+        challenges:
+            - staticvsnonstaticandself_staticpropertymc
+            - staticvsnonstaticandself_useselfkeywordcoding
+    static-methods:
+        is_free:    true
+        video_key: 175248837
+        challenges:
+            - staticmethods_staticgetallelementscoding
+            - staticmethods_fixerrorscoding
+            - staticmethods_staticvsnonstaticmc
+    namespaces-make-class-names-longer:
+        video_key: 175260333
+        challenges:
+            - namespacesmakeclassnameslonger_addnamespacecoding
+            - namespacesmakeclassnameslonger_usenamespacecoding
+            - namespacesmakeclassnameslonger_useonemorenamespacecoding
+            - namespacesmakeclassnameslonger_namespaceusagemc
+    autoloading-awesomeness:
+        is_finished: false
+        video_key: ~
+        challenges: []
+    more-with-use-statements:
+        is_finished: false
+        video_key: ~
+        challenges: []
+    namespaces-core-php-classes:
+        is_finished: false
+        video_key: ~
+        challenges: []
+    composer-autoloading:
+        is_finished: false
+        video_key: ~
+        challenges: []
+    throw-exceptions:
+        is_finished: false
+        video_key: ~
+        challenges: []
+    exception-classes:
+        is_finished: false
+        video_key: ~
+        challenges: []
+    magic-methods:
+        is_finished: false
+        video_key: ~
+        challenges: []
+    array-access:
+        is_finished: false
+        video_key: ~
+        challenges: []
+    iterator-aggregate:
+        is_finished: false
+        video_key: ~
+        challenges: []
+    traits-reuse:
+        is_finished: false
+        video_key: ~
+        challenges: []
+    composition-ftw:
+        is_finished: false
+        video_key: ~
+        challenges: []

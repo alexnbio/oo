@@ -1,4 +1,5 @@
 <?php
+
 require __DIR__.'/bootstrap.php';
 
 $container = new Container($configuration);
@@ -11,7 +12,7 @@ $ship2Id       = isset($_POST['ship2_id']) ? $_POST['ship2_id'] : null;
 $ship2Quantity = isset($_POST['ship2_quantity']) ? $_POST['ship2_quantity'] : 1;
 
 if (!$ship1Id || !$ship2Id) {
-    header('Location: /index.php?error=missing_data');
+    header('Location: /oo/index.php?error=missing_data');
     die;
 }
 
@@ -19,12 +20,12 @@ $ship1 = $shipLoader->findOneById($ship1Id);
 $ship2 = $shipLoader->findOneById($ship2Id);
 
 if (!$ship1 || !$ship2) {
-	header('Location: /index.php?error=bad_ships');
+	header('Location: /oo/index.php?error=bad_ships');
 	die;
 }
 
 if ($ship1Quantity <= 0 || $ship2Quantity <= 0) {
-    header('Location: /index.php?error=bad_quantities');
+    header('Location: /oo/index.php?error=bad_quantities');
     die;
 }
 

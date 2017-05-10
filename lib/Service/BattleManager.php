@@ -1,6 +1,9 @@
 <?php
 
-namespace Battle;
+namespace Service;
+
+use Model\AbstractShip;
+use Model\BattleResult;
 
 class BattleManager
 {
@@ -13,7 +16,7 @@ class BattleManager
 	 *
 	 * @return BattleResult With winning_ship, losing_ship & used_jedi_powers
 	 */
-	public function battle(\AbstractShip $ship1, $ship1Quantity, \AbstractShip $ship2, $ship2Quantity, $battleType)
+	public function battle(AbstractShip $ship1, $ship1Quantity, AbstractShip $ship2, $ship2Quantity, $battleType)
 	{
 		$ship1Health = $ship1->getStrength() * $ship1Quantity;
 		$ship2Health = $ship2->getStrength() * $ship2Quantity;
@@ -69,7 +72,7 @@ class BattleManager
 			$usedJediPowers = $ship1UsedJediPowers;
 		}
 		
-		return new \BattleResult($usedJediPowers, $winningShip, $losingShip);
+		return new BattleResult($usedJediPowers, $winningShip, $losingShip);
 		
 // 		return array(
 // 			'winning_ship'     => $winningShip,
@@ -87,7 +90,7 @@ class BattleManager
 		);		
 	}
 	
-	private function didJediDestroyShipUsingTheForce(\AbstractShip $ship)
+	private function didJediDestroyShipUsingTheForce(AbstractShip $ship)
 	{
 		$jediHeroProbability = $ship->getJediFactor() / 100;
 		

@@ -4,7 +4,7 @@
  * SETTINGS!
  */
 $databaseName = 'oo_battle';
-$databaseUser = 'root';
+$databaseUser = 'phpmyadmin';
 $databasePassword = '';
 
 /*

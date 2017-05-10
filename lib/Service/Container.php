@@ -1,7 +1,6 @@
 <?php
 
-
-use Battle\BattleManager;
+namespace Service;
 
 class Container {
 	
@@ -20,12 +19,12 @@ class Container {
 	 */
 	public function getPDO()
 	{
-		$pdo = new PDO(
+		$pdo = new \PDO(
 			$this->configuration['db_dsn'],
 			$this->configuration['db_user'],
 			$this->configuration['db_pass']
 		);
-		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 		return $pdo;
 	}
 	
@@ -36,8 +35,8 @@ class Container {
 	public function getShipStorage()
 	{
 		if ($this->shipStorage == null) {
-// 			$this->shipStorage = new PdoShipStorage($this->getPDO());
-			$this->shipStorage = new JsonFileShipStorage(__DIR__.'/../../resources/ships.json');
+			$this->shipStorage = new PdoShipStorage($this->getPDO());
+// 			$this->shipStorage = new JsonFileShipStorage(__DIR__.'/../../resources/ships.json');
 		}
 		return $this->shipStorage;
 	}

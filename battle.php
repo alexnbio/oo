@@ -1,5 +1,7 @@
 <?php
 
+use Service\Container;
+
 require __DIR__.'/bootstrap.php';
 
 $container = new Container($configuration);
@@ -102,7 +104,7 @@ $battleResult = $battleManager->battle($ship1, $ship1Quantity, $ship2, $ship2Qua
                     <dd><?php echo $ship2->getStrength(); ?></dd>
 				</dl>
             </div>
-            <a href="/index.php"><p class="text-center"><i class="fa fa-undo"></i> Battle again</p></a>
+            <a href="/oo/index.php"><p class="text-center"><i class="fa fa-undo"></i> Battle again</p></a>
         
             <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

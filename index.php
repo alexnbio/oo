@@ -1,6 +1,8 @@
 <?php
 
-use Battle\BattleManager;
+use Service\BattleManager;
+use Service\Container;
+use Model\BrokenShip;
 
 require __DIR__.'/bootstrap.php';
 

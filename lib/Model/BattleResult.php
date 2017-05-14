@@ -2,7 +2,7 @@
 
 namespace Model;
 
-class BattleResult
+class BattleResult implements \ArrayAccess
 {
 	private $usedJediPowers;
 	private $winningShip;
@@ -49,5 +49,44 @@ class BattleResult
 		return $this->getWinningShip() !== null;
 	}
 	
+	/**
+	 * 
+	 * {@inheritDoc}
+	 * @see ArrayAccess::offsetExists()
+	 */
+	public function offsetExists($offset)
+	{
+		return property_exists($this, $offset);
+	}
+	
+	/**
+	 * 
+	 * {@inheritDoc}
+	 * @see ArrayAccess::offsetGet()
+	 */
+	public function offsetGet($offset)
+	{
+		return $this->$offset;
+	}
+	
+	/**
+	 * 
+	 * {@inheritDoc}
+	 * @see ArrayAccess::offsetSet()
+	 */
+	public function offsetSet($offset, $value)
+	{
+		$this->$offset = $value;
+	}
+	
+	/**
+	 * 
+	 * {@inheritDoc}
+	 * @see ArrayAccess::offsetUnset()
+	 */
+	public function offsetUnset($offset)
+	{
+		unset($this->$offset);
+	}
 	
 }

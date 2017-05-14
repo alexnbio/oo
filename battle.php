@@ -98,9 +98,9 @@ $battleResult = $battleManager->battle($ship1, $ship1Quantity, $ship2, $ship2Qua
                 </p>
                 <h3>Remaining Strength</h3>
                 <dl class="dl-horizontal">
-                    <dt><?php echo $ship1->getName(); ?></dt>
+                    <dt><?php echo $ship1; ?></dt>
                     <dd><?php echo $ship1->getStrength(); ?></dd>
-                    <dt><?php echo $ship2->getName(); ?></dt>
+                    <dt><?php echo $ship2; ?></dt>
                     <dd><?php echo $ship2->getStrength(); ?></dd>
 				</dl>
             </div>
